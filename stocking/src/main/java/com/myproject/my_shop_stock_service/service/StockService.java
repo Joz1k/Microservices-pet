@@ -19,7 +19,7 @@ public class StockService {
     public List<StockResponse> isInStock(List<String> code) {
         return stockRepository.findByCodeIn(code).stream()
                 .map(item ->
-                    StockResponse.builder().code(item.getCode()).isInStock(item.getQuantity() > 0).build()
+                        StockResponse.builder().code(item.getCode()).isInStock(item.getQuantity() > 0).build()
                 ).toList();
     }
 }

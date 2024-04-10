@@ -1,9 +1,9 @@
 package com.myproject.my_shop_ordering.controller;
 
+import com.myproject.my_shop_ordering.dto.ProductRequest;
 import com.myproject.my_shop_ordering.dto.ProductResponse;
 import com.myproject.my_shop_ordering.service.ProductService;
 import lombok.RequiredArgsConstructor;
-import com.myproject.my_shop_ordering.dto.ProductRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

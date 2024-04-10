@@ -1,11 +1,11 @@
 package com.myproject.my_shop_ordering.service;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import com.myproject.my_shop_ordering.dto.ProductRequest;
 import com.myproject.my_shop_ordering.dto.ProductResponse;
 import com.myproject.my_shop_ordering.model.Product;
 import com.myproject.my_shop_ordering.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +16,7 @@ import java.util.List;
 public class ProductService {
 
     private final ProductRepository productRepository;
+
     public void createProduct(ProductRequest request) {
         Product product = Product.builder().name(request.getName())
                 .description(request.getDescription()).price(request.getPrice()).build();
